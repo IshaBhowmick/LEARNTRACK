@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login | LEARNTRACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <a class="logo" href="home.html">LEARN<span>TRACK</span></a>
+        <p class="muted">Your personal learning companion</p>
+        <div class="auth-switch">
+          <button id="studentTab" class="active" onclick="showForm('student')">
+            Student Login</button
+          ><button id="adminTab" onclick="showForm('admin')">
+            Admin Login
+          </button>
+        </div>
+        <form id="studentForm">
+          <h1>Welcome back!</h1>
+          <p class="muted">Sign in to continue learning.</p>
+          <div class="field">
+            <label>Email or username</label><input id="studentUser" required />
+          </div>
+          <div class="field">
+            <label>Password</label
+            ><input id="studentPass" type="password" required />
+          </div>
+          <label class="checkline"
+            ><input type="checkbox" id="remember" /> Remember me</label
+          ><button class="btn full" style="margin-top: 18px">
+            Student Login
+          </button>
+          <p class="muted" style="margin-top: 14px">
+            New here?
+            <a
+              href="#"
+              onclick="
+                showRegister();
+                return false;
+              "
+              style="color: #4965e9"
+              >Create student account</a
+            >
+          </p>
+          <p class="muted">
+            <a
+              href="#"
+              onclick="
+                alert(
+                  'For this demo, register a new account to set a password.',
+                );
+                return false;
+              "
+              >Forgot password?</a
+            >
+          </p>
+        </form>
+        <form id="adminForm" class="hidden">
+          <h1>Admin access</h1>
+          <p class="muted">Manage students, courses and activity.</p>
+          <div class="field">
+            <label>Admin username</label><input id="adminUser" required />
+          </div>
+          <div class="field">
+            <label>Admin password</label
+            ><input id="adminPass" type="password" required />
+          </div>
+          <button class="btn full">Admin Login</button>
+          <p class="muted" style="margin-top: 15px">
+            Demo: <b>admin</b> / <b>learntrack123</b>
+          </p>
+        </form>
+        <form id="registerForm" class="hidden">
+          <h1>Create account</h1>
+          <div class="field">
+            <label>Full name</label><input id="regName" required />
+          </div>
+          <div class="field">
+            <label>Email</label><input id="regEmail" type="email" required />
+          </div>
+          <div class="field">
+            <label>Password</label
+            ><input id="regPass" type="password" minlength="4" required />
+          </div>
+          <button class="btn full">Create Account</button>
+          <p class="muted" style="margin-top: 15px">
+            <a
+              href="#"
+              onclick="
+                showForm('student');
+                return false;
+              "
+              >Back to login</a
+            >
+          </p>
+        </form>
+        <div id="loginMessage"></div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

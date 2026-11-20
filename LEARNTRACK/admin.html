@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Admin Dashboard | LEARNTRACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="logo" href="home.html">LEARN<span>TRACK</span></a>
+      <nav class="navlinks">
+        <a href="home.html">Home</a><a href="about.html">About Us</a
+        ><a href="services.html">Services</a><a href="contact.html">Contact</a
+        ><a href="dashboard.html">Dashboard</a
+        ><a class="btn small" href="index.html">Login</a>
+      </nav>
+    </div>
+
+    <div class="app">
+      <aside class="sidebar">
+        <h4>ADMIN PANEL</h4>
+        <a class="active" href="admin.html">▦ Overview</a
+        ><a href="#students">Students</a><a href="#courses">Manage Courses</a
+        ><a href="#messages">Messages</a><a href="home.html">Home</a
+        ><a href="#" onclick="logout()">↪ Logout</a>
+      </aside>
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Management</span>
+            <h1>Admin Dashboard</h1>
+            <p class="muted">
+              Manage learning content and review student activity.
+            </p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong id="adminStudents">0</strong
+            ><span>Registered Students</span>
+          </div>
+          <div class="stat">
+            <strong id="adminCourses">0</strong><span>Available Courses</span>
+          </div>
+          <div class="stat">
+            <strong id="adminQuizzes">0</strong><span>Quizzes Attempted</span>
+          </div>
+        </div>
+        <div class="card" id="students" style="margin-top: 22px">
+          <h3>Registered Students</h3>
+          <div id="studentTable"></div>
+        </div>
+        <div class="card" id="courses" style="margin-top: 22px">
+          <h3>Manage Courses</h3>
+          <form id="courseForm" class="flex">
+            <div class="field" style="flex: 1">
+              <label>Course title</label><input id="newTitle" required />
+            </div>
+            <div class="field" style="flex: 1">
+              <label>Category</label><input id="newCategory" required />
+            </div>
+            <div class="field" style="flex: 2">
+              <label>Description</label><input id="newDesc" required />
+            </div>
+            <button class="btn" style="align-self: center">Add Course</button>
+          </form>
+          <div id="adminCourseList"></div>
+        </div>
+        <div class="card" id="messages" style="margin-top: 22px">
+          <h3>Contact Form Submissions</h3>
+          <div id="messageList"></div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h2>LEARNTRACK</h2>
+          <p>Your Learning Journey Starts Here.</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Links</h3>
+          <p>Home</p>
+          <p>My courses</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Learning</h3>
+          <p>Web development</p>
+          <p>Programming</p>
+          <p>Practice Quizzes</p>
+          <p>Track Performance</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Support</h3>
+          <p>Help</p>
+          <p>Contact Us</p>
+          <p>FAQs</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <p>Instagram</p>
+          <p>GitHub</p>
+          <p>LinkedIn</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LEARNTRACK. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="contact.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

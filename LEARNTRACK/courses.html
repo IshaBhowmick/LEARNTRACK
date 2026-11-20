@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>| LEARNTRACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h4>LEARNING SPACE</h4>
+        <a href="dashboard.html"> Dashboard</a
+        ><a href="courses.html"> My Courses</a
+        ><a href="quiz.html"> Take a Quiz</a
+        ><a href="progress.html"> Learning Progress</a>
+        <h4>DISCOVER</h4>
+        <a href="home.html">Home</a><a href="about.html">About Us</a
+        ><a href="services.html">Services</a
+        ><a href="contact.html">Contact Us</a
+        ><a href="#" onclick="logout()">Logout</a>
+      </aside>
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Keep moving forward</span>
+            <h1>My Courses</h1>
+            <p class="muted">
+              Choose a course and update your learning progress.
+            </p>
+          </div>
+        </div>
+        <div class="flex" id="courseList"></div>
+      </main>
+    </div>
+
+    <script src="courses.js"></script>
+  </body>
+</html>
